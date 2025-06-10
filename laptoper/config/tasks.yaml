@@ -1,0 +1,13 @@
+tasks:
+- agent: Custom Tool Agent
+  description: 'Use the custom tool to fulfill this request: enhance input  image '
+  expected_output: The task output using the tool.
+- agent: agent_to_recomend_the_best_books_agent
+  description: 'Use tool `run_custom_tool` to accomplish: agent to recomend the best
+    books '
+  expected_output: The completed result using the tool.
+- agent: i_want_to_build_a_tool_for_translating_text_into_french_agent
+  description: 'Use the tool `run_image_generator_tool` to accomplish: I want to build
+    a tool for translating text into French'
+  expected_output: The completed result for I want to build a tool for translating
+    text into French.
