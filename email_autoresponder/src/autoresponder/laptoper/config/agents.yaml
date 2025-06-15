@@ -1,0 +1,20 @@
+agents:
+- allow_delegation: false
+  backstory: An intelligent agent that utilizes custom tools to solve tasks.
+  goal: 'To perform: enhance input  image '
+  name: Custom Tool Agent
+  role: A specialized agent to use a custom tool.
+  verbose: true
+- allow_delegation: false
+  backstory: An intelligent AI agent capable of using tools for specific tasks.
+  goal: 'Perform the task: agent to recomend the best books '
+  name: agent_to_recomend_the_best_books_agent
+  role: 'A specialized agent for: agent to recomend the best books '
+  verbose: true
+- allow_delegation: false
+  backstory: An intelligent AI agent capable of using tools for specific tasks.
+  goal: 'Perform the task: I want to build a tool for translating text into French'
+  name: i_want_to_build_a_tool_for_translating_text_into_french_agent
+  role: 'A specialized agent for: I want to build a tool for translating text into
+    French'
+  verbose: true

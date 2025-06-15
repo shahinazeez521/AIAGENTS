@@ -1,0 +1,16 @@
+analyze_emails_task:
+  description: Use the GmailTool to fetch unread emails and identify those requiring an out-of-office reply. Exclude emails with subjects containing 'newsletter', 'otp', or 'verification'. Return a JSON list of relevant emails with fields: email_id, sender, subject.
+  expected_output: A JSON lisst of relevant emails with fields: email_id, sender, subject.
+  agent: email_analyzer
+  tools:
+    - GmailTool
+  context: []
+  output_json: true
+draft_reply_task:
+  description: Draft a personalized out-of-office reply for each relevant email identified by the email_analyzer. Use the GmailTool to save the reply as a draft in Gmail. The reply should be polite and include a return date (e.g., 'July 1, 2025').
+  expected_output: Confirmation that out-of-office reply drafts have been saved for each relevant email.
+  agent: email_responder
+  tools:
+    - GmailTool
+  context:
+    - analyze_emails_task
